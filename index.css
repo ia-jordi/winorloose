@@ -23,7 +23,7 @@ body {
     align-items: center;
     justify-content: center;
     background-image: radial-gradient(circle at top right, rgba(0, 136, 255, 0.1), transparent),
-                      radial-gradient(circle at bottom left, rgba(255, 77, 77, 0.1), transparent);
+        radial-gradient(circle at bottom left, rgba(255, 77, 77, 0.1), transparent);
 }
 
 .container {
@@ -44,6 +44,7 @@ h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: linear-gradient(to right, #60a5fa, #f472b6);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -141,6 +142,75 @@ p {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Trivia Section */
+.trivia-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.trivia-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    /* Gold color for trivia title */
+}
+
+#trivia-question {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+    /* Prevent layout shift */
+}
+
+.btn-true {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.btn-true:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+.btn-false {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-false:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.score {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#trivia-feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+    height: 1.5rem;
+}
+
+.feedback-correct {
+    color: #2ecc71;
+}
+
+.feedback-incorrect {
+    color: #e74c3c;
 }
